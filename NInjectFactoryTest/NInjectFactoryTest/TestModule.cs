@@ -13,7 +13,12 @@ namespace NInjectFactoryTest
         public override void Load()
         {
             Bind<ITestInterface>().To<TestClass>();
-            Bind<ITestInterface>().To<ConfigurableTestClass>().WithParameter(new DynamicBindingParameter("test", new [] { "This is injected data" }, true));
+            var dynamicBinding = new DynamicBindingParameter("test", new[]
+            {
+                "This is injected data",
+                "This is anoter injected data"
+            }, true);
+            Bind<ITestInterface>().To<ConfigurableTestClass>().WithParameter(dynamicBinding);
         }
     }
 }
