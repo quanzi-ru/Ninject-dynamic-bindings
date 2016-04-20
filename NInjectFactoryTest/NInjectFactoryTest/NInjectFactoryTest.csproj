@@ -33,10 +33,6 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="Ninject, Version=3.2.0.0, Culture=neutral, PublicKeyToken=c7192dc5380945e7, processorArchitecture=MSIL">
-      <HintPath>..\packages\Ninject.3.2.2.0\lib\net45-full\Ninject.dll</HintPath>
-      <Private>True</Private>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
@@ -59,6 +55,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\..\..\Ninject\src\Ninject\Ninject.csproj">
+      <Project>{adf369e2-6b9e-4d56-9b82-d273ae41ec2d}</Project>
+      <Name>Ninject</Name>
+    </ProjectReference>
     <ProjectReference Include="..\DynamicBinding.Core\DynamicBinding.Core.csproj">
       <Project>{51FA56D2-C949-424F-8D84-E2D2643E550B}</Project>
       <Name>DynamicBinding.Core</Name>
